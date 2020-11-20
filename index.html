@@ -8,41 +8,49 @@
   </head>
   <body>
     <header class="header">
-      <div><img class="header__logo" src="" alt="Journal's Logo"></div>
+      <div><img class="header__logo" src="./Images/LunettaLogo.png" alt="Journal's Logo"></div>
       <h1 class="header__name">Christopher Lunetta</h1>
     </header>
 
     <main class="content">
-      <article class="form">
+      
+      <article class="form--containter">
         <h2>Daily Journal</h2>
-        <form action=""></form>
-          <fieldset class="form__journalDate flexColumn">
-            <label for="journalDate">Date of Entry</label>
-            <input type="date" name="journalDate" id="journalDate">
-          </fieldset>
-          <fieldset class="form__concepts flexColumn">  
-            <label for="concepts">Concepts Covered</label>
-            <input type="text" name="concepts" id="concepts">
-          </fieldset>
+        
+        <!-- form to add additional journal enties -->
+        <!-- TODO functionality needs to be added -->
+        <form class="form" action="">
+          <div class="form--containerTop">
+            <fieldset class="form__journalDate flexColumn">
+              <label for="journalDate">Date of Entry</label>
+              <input type="date" name="journalDate" id="journalDate">
+            </fieldset>
+            <fieldset class="form__concepts flexColumn">  
+              <label for="concepts">Concepts Covered</label>
+              <input type="text" name="concepts" id="concepts">
+            </fieldset>
+            <fieldset class="form__mood flexColumn">
+              <label for="mood">Mood for the Day</label>
+              <select name="mood" id="mood">
+                <option value="confused">Confused</option>
+                <option value="ok">OK</option>
+                <option value="alright">Alright</option>
+                <option value="mind_blown">Mind Blown!</option>
+                <option value="making_it_work">Making it work!</option>
+              </select>
+            </fieldset>
+          </div>
           <fieldset class="form__entry flexColumn">
             <label for="entry">Journal Entry</label>
             <textarea name="entry" id="entry" cols="30" rows="10"></textarea>
           </fieldset>
-          <fieldset class="form__mood flexColumn">
-            <label for="mood">Mood for the Day</label>
-            <select name="mood" id="mood"></select>
-          </fieldset>
-            <button class="form__record">Record Journal Entry</button>
+          <button class="form__record">Record Journal Entry</button>
+        </form>
       </article>
-      <article>
-        <section>
-          <div class="date">date</div>
-          <div class="concepts">concepts</div>
-          <div class="entry">entry</textarea></div>
-          <div class="mood">mood</select></div>
-          <div class="edit"><button type="submit">edit</button></div>
-          <div class="delete"><button type="submit">Delete</button></div>
-        </section>
+      
+
+      <article class="journalContent">
+        <!-- journalContent.js to output each entry -->
       </article>      
 
     </main>
