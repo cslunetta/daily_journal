@@ -1,0 +1,27 @@
+@import "./form.css";
+
+body {
+  margin: 0;
+}
+
+.header {
+  text-align: center;
+  background-color: #333333;
+  color: white;
+}
+
+.content {
+  margin: 10px;
+}
+
+.footer {
+  padding: 10px;
+  text-align: end;
+  background-color: #333333;
+  color: white
+}
+
+.footer a {
+  color: white;
+}
+
