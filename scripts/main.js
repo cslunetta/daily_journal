@@ -1,6 +1,3 @@
-import { useJournalEntries } from "./journalDataProvider.js";
+import { journalContent } from "./journalContent.js";
 
-useJournalEntries();
-
-const journalLog = useJournalEntries();
-console.log(journalLog);
+journalContent();

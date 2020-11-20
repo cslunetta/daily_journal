@@ -31,7 +31,7 @@ const journal = [
     mood: "mind blown",
   },
   {
-    id: 3,
+    id: 4,
     date: "11/19/2020",
     concept: "Filtering Source Data Into Smaller Arrays",
     entry:
