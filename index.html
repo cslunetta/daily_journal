@@ -4,20 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lunetta Daily Journal</title>
+    <link rel="stylesheet" href="./styles/main.css">
   </head>
   <body>
-    <header>
-      <div><img class="logo" src="" alt="Journal's Logo"></div>
-      <div class="Name">Christopher Lunetta</div>
+    <header class="header">
+      <div><img class="header__logo" src="" alt="Journal's Logo"></div>
+      <h1 class="header__name">Christopher Lunetta</h1>
     </header>
 
-    <main>
+    <main class="content">
       <article class="form">
-          <div><input type="date" name="" id=""></div>
-          <div><input type="text" name="" id=""></div>
-          <div><textarea name="" id="" cols="30" rows="10"></textarea></div>
-          <div><select name="" id=""></select></div>
-          <div><button>Record Journal Entry</button></div>
+        <h2>Daily Journal</h2>
+        <form action=""></form>
+          <fieldset class="form__journalDate flexColumn">
+            <label for="journalDate">Date of Entry</label>
+            <input type="date" name="journalDate" id="journalDate">
+          </fieldset>
+          <fieldset class="form__concepts flexColumn">  
+            <label for="concepts">Concepts Covered</label>
+            <input type="text" name="concepts" id="concepts">
+          </fieldset>
+          <fieldset class="form__entry flexColumn">
+            <label for="entry">Journal Entry</label>
+            <textarea name="entry" id="entry" cols="30" rows="10"></textarea>
+          </fieldset>
+          <fieldset class="form__mood flexColumn">
+            <label for="mood">Mood for the Day</label>
+            <select name="mood" id="mood"></select>
+          </fieldset>
+            <button class="form__record">Record Journal Entry</button>
       </article>
       <article>
         <section>
@@ -32,7 +47,7 @@
 
     </main>
 
-    <footer>
+    <footer class="footer">
       <div class="gitHub_link"><a href="">GitHub</a></div>
       <div class="copyright">©Christopher Lunetta</div>
     </footer>
