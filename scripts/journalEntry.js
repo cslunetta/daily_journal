@@ -2,13 +2,13 @@
 
 export const journalEntry = (journalData) => {
   return `
-    <section>
-      <div class="date">date</div>
-      <div class="concepts">concepts</div>
-      <div class="entry">entry</textarea></div>
-      <div class="mood">mood</select></div>
-      <div class="edit"><button type="submit">edit</button></div>
-      <div class="delete"><button type="submit">Delete</button></div>
+    <section class="journalEntry">
+      <div class="journalEntry__date">${journalData.date}</div>
+      <div class="journalEntry__concepts">${journalData.concepts}</div>
+      <div class="journalEntry__mood">${journalData.mood}</div>
+      <div class="journalEntry__entry">${journalData.entry}</div>
+      <div class="journalEntry__edit"><button type="submit">edit</button></div>
+      <div class="journalEntry__delete"><button type="submit">Delete</button></div>
     </section>
   `;
 };
