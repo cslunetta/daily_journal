@@ -1,0 +1,32 @@
+.journalContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly ;
+}
+
+.journalEntry {
+  margin: 5px;
+  padding: 5px;
+  border: solid black 1px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.journalEntry__entry {
+  border: solid 1px black;
+  padding: 5px;
+  margin: 5px 0;
+  height: 150px;
+}
+
+.journalEntry__edit {
+  align-self: flex-end;
+  margin: 3px;
+}
+
+.journalEntry__delete {
+  align-self: flex-end;
+  margin: 3px;
+}
