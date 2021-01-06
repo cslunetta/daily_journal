@@ -1,8 +1,7 @@
-const contentTarget = document.querySelector(".form--container");
+import { saveJournalEntry } from "./journalDataProvider.js";
 
-export const journalForm = () => {
-  render();
-};
+const eventHub = document.querySelector(".container");
+const contentTarget = document.querySelector(".form--container");
 
 const render = () => {
   contentTarget.innerHTML = `
@@ -31,7 +30,27 @@ const render = () => {
         <label for="entry">Journal Entry</label>
         <textarea name="entry" id="entry" cols="30" rows="10"></textarea>
       </fieldset>
-      <button class="form__record">Record Journal Entry</button>
+      <button class="form__record" id="saveEntry">Record Journal Entry</button>
     </form>
   `;
+};
+
+eventHub.addEventListener("click", (clickEvent) => {
+  if (clickEvent.target.id === "saveEntry") {
+    let dateOfEntry = document.querySelector("#journalDate").value;
+    let concept = document.querySelector("#concepts").value;
+    let mood = document.querySelector("#mood").value;
+    let entry = document.querySelector("#entry").value;
+    const newEntry = {
+      date: dateOfEntry,
+      concept,
+      mood,
+      entry,
+    };
+    saveJournalEntry(newEntry);
+  }
+});
+
+export const journalForm = () => {
+  render();
 };
