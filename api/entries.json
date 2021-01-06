@@ -27,6 +27,20 @@
       "concept": "Filtering Source Data Into Smaller Arrays",
       "entry": "Started out with a quick lightning excersise and then went straight into chapter 13 learning how to filter arrays using javascript",
       "mood": "making it work!"
+    },
+    {
+      "date": "2021-01-05",
+      "concept": "ERD's",
+      "mood": "mind_blown",
+      "entry": "Seems Logical",
+      "id": 5
+    },
+    {
+      "date": "2021-01-04",
+      "concept": "ERD's",
+      "mood": "ok",
+      "entry": "Seems to make sense but Curious to see how this gets used more.",
+      "id": 6
     }
   ]
 }
