@@ -40,3 +40,10 @@ export const saveJournalEntry = (newJournalEntry) => {
     .then(getJournalEntries) // <-- Get all journal entries
     .then(dispatchStateChangeEvent); // <-- Broadcast the state change event
 };
+
+export const deleteEntry = entryId => {
+  return fetch(`http://localhost:8088/entries/${entryId}`, {
+    method: "DELETE"
+  })
+  .then(getJournalEntries)
+}
