@@ -1,9 +1,10 @@
-import { saveJournalEntry } from "./journalDataProvider.js";
+import { saveJournalEntry } from "./entryDataProvider.js";
+import { getMoods, useMoods } from "../moods/moodProvider.js";
 
 const eventHub = document.querySelector(".container");
 const contentTarget = document.querySelector(".form--container");
 
-const render = () => {
+const render = (allMoods) => {
   contentTarget.innerHTML = `
     <form class="form" action="">
       <div class="form--containerTop">
@@ -18,11 +19,12 @@ const render = () => {
         <fieldset class="form__mood flexColumn">
           <label for="mood">Mood for the Day</label>
           <select name="mood" id="mood">
-            <option value="confused">Confused</option>
-            <option value="ok">OK</option>
-            <option value="alright">Alright</option>
-            <option value="mind_blown">Mind Blown!</option>
-            <option value="making_it_work">Making it work!</option>
+            <option value="0">Choose your mood...</option>
+            ${allMoods
+              .map((mood) => {
+                return `<option value="${mood.id}">${mood.label}</option>`;
+              })
+              .join("")}
           </select>
         </fieldset>
       </div>
@@ -39,12 +41,12 @@ eventHub.addEventListener("click", (clickEvent) => {
   if (clickEvent.target.id === "saveEntry") {
     let dateOfEntry = document.querySelector("#journalDate").value;
     let concept = document.querySelector("#concepts").value;
-    let mood = document.querySelector("#mood").value;
+    let moodId = parseInt(document.querySelector("#mood").value);
     let entry = document.querySelector("#entry").value;
     const newEntry = {
       date: dateOfEntry,
       concept,
-      mood,
+      moodId,
       entry,
     };
     saveJournalEntry(newEntry);
@@ -52,5 +54,9 @@ eventHub.addEventListener("click", (clickEvent) => {
 });
 
 export const journalForm = () => {
-  render();
+  getMoods()
+  .then(() => {
+    const allMoods = useMoods();
+    render(allMoods);
+  })
 };

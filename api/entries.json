@@ -5,42 +5,96 @@
       "date": "11/16/2020",
       "concept": "HTML & CSS",
       "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-      "mood": "Ok"
+      "moodId": 1
     },
     {
       "id": 2,
       "date": "11/17/2020",
       "concept": "Git and GitHub",
       "entry": "We discussed using git and github",
-      "mood": "alright"
+      "moodId": 5
     },
     {
       "id": 3,
       "date": "11/18/2020",
       "concept": "Java script basics",
       "entry": "started in on using javascript",
-      "mood": "mind blown"
+      "moodId": 7
     },
     {
       "id": 4,
       "date": "11/19/2020",
       "concept": "Filtering Source Data Into Smaller Arrays",
       "entry": "Started out with a quick lightning excersise and then went straight into chapter 13 learning how to filter arrays using javascript",
-      "mood": "making it work!"
+      "moodId": 11
     },
     {
+      "id": 5,
       "date": "2021-01-05",
       "concept": "ERD's",
-      "mood": "mind_blown",
       "entry": "Seems Logical",
-      "id": 5
+      "moodId": 7
     },
     {
+      "id": 6,
       "date": "2021-01-04",
       "concept": "ERD's",
-      "mood": "ok",
       "entry": "Seems to make sense but Curious to see how this gets used more.",
-      "id": 6
+      "moodId": 4
+    }
+  ],
+  "moods": [
+    {
+      "id": 1,
+      "label": "🙃 normal 🙃"
+    },
+    {
+      "id": 2,
+      "label": "😡 anrgy 🤬"
+    },
+    {
+      "id": 3,
+      "label": "😶 ennui 😑"
+    },
+    {
+      "id": 4,
+      "label": "😍 excited 🤩"
+    },
+    {
+      "id": 5,
+      "label": "😏 funky 😎"
+    },
+    {
+      "id": 6,
+      "label": "😀 happy 😁"
+    },
+    {
+      "id": 7,
+      "label": "💣.🧠.💥.🤯"
+    },
+    {
+      "id": 8,
+      "label": "😖 overwhelmed 😵"
+    },
+    {
+      "id": 9,
+      "label": "😤 pumped 😆"
+    },
+    {
+      "id": 10,
+      "label": "🤢 sick 🤮"
+    },
+    {
+      "id": 11,
+      "label": "🧐 smart 🤓"
+    },
+    {
+      "id": 12,
+      "label": "😢 sorrowful 😭"
+    },
+    {
+      "id": 13,
+      "label": "☠ PIT OF DESPAIR ☠"
     }
   ]
 }
