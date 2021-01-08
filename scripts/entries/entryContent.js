@@ -1,6 +1,6 @@
-import { useJournalEntries, getJournalEntries } from "./journalDataProvider.js";
-import { journalEntry } from "./journalEntry.js";
-import { journalForm } from "./JournalForm.js";
+import { useJournalEntries, getJournalEntries } from "./entryDataProvider.js";
+import { entry } from "./entry.js";
+import { journalForm } from "./entryForm.js";
 
 const eventHub = document.querySelector(".container");
 // refrence element to add code after
@@ -14,7 +14,7 @@ export const journalContent = () => {
   getJournalEntries().then(() => {
     let journalEntries = useJournalEntries();
     for (const journalObject of journalEntries) {
-      const journalHTML = journalEntry(journalObject);
+      const journalHTML = entry(journalObject);
       contentElement.innerHTML += journalHTML;
     }
   });

@@ -1,5 +1,5 @@
-import { journalContent } from "./journalContent.js";
-import { journalForm } from "./JournalForm.js";
+import { journalContent } from "./entries/entryContent.js";
+import { journalForm } from "./entries/entryForm.js";
 
 journalForm();
 journalContent();
